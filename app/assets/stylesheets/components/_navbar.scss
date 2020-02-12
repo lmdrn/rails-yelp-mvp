@@ -1,7 +1,13 @@
 .navbar-lewagon {
+  display: flex;
   justify-content: space-between;
   background: white;
+  padding: 20px;
+  border-radius : 5px;
 }
+
+.navbar-lewagon p {
+  margin-bottom: 0px; }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;

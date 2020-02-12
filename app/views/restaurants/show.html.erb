@@ -1,2 +1,22 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<div class="background-title">
+  <h1><%= @restaurant.name %></h1>
+</div>
+<div class="restaurants">
+  <h3><%= @restaurant.address %></h3>
+  <p>
+    <i class="fas fa-utensils"></i><%= (@restaurant.category).capitalize %>
+  </p>
+  <p>
+    <i class="fas fa-phone-volume"></i><%= @restaurant.phone_number %>
+  </p>
+
+  <h3> Reviews</h3>
+  <p><% @restaurant.reviews.each do |review| %>
+     <p><strong>About this restaurant:</strong> <%= review.content %></p>
+     <p><strong>Rating:</strong> <%= review.rating %>/5</p>
+   <% end %></p>
+
+  <%= link_to new_restaurant_review_path(@restaurant) do %>
+    <p><i class="fas fa-plus-circle"></i> Add a review </p>
+  <% end %>
+</div>

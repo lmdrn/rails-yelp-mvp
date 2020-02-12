@@ -1,2 +1,14 @@
-<h1>Restaurants#index</h1>
-<p>Find me in app/views/restaurants/index.html.erb</p>
+<div class="background-title"><h1>My Restaurants</h1></div>
+<br>
+  <div class="restaurants">  <% @restaurants.each do |restaurant| %>
+    <div class="inline"><h4><%= restaurant.name %></h4>
+      <%= link_to restaurant_path(restaurant) do %>
+      <p><i class="fas fa-info-circle"></i>more</p>
+      <% end %>
+    </div>
+    <p><%= restaurant.address %></p>
+    <% end %>
+  </div>
+
+
+

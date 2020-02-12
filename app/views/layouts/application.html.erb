@@ -11,6 +11,14 @@
   </head>
 
   <body>
+    <nav class="navbar-lewagon navbar-collapse">
+      <%= link_to new_restaurant_path do %>
+      <p><i class="fas fa-plus-circle"></i></i> Add a restaurant </p>
+      <% end %>
+      <%= link_to restaurants_path do %>
+      <p><i class="fas fa-backspace"></i> Back to List </p>
+      <% end %>
+    </nav>
     <%= yield %>
   </body>
 </html>
